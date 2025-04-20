@@ -1,0 +1,5 @@
+index=main sourcetype="csv"
+| lookup NewSolarWindsIOCs "IP Address" AS dest_ip OUTPUT "IP Address"
+| where isnotnull('IP Address')
+
+
